@@ -1,0 +1,6 @@
+D:\all\МИИТ\Прога\TYYSem1\Задание 9\Task9\bin\Debug\Task9.exe
+D:\all\МИИТ\Прога\TYYSem1\Задание 9\Task9\bin\Debug\Task9.pdb
+D:\all\МИИТ\Прога\TYYSem1\Задание 9\Task9\obj\Debug\Task9.csproj.AssemblyReference.cache
+D:\all\МИИТ\Прога\TYYSem1\Задание 9\Task9\obj\Debug\Task9.csproj.CoreCompileInputs.cache
+D:\all\МИИТ\Прога\TYYSem1\Задание 9\Task9\obj\Debug\Task9.exe
+D:\all\МИИТ\Прога\TYYSem1\Задание 9\Task9\obj\Debug\Task9.pdb

@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\all\\\u041C\u0418\u0418\u0422\\\u041F\u0440\u043E\u0433\u0430\\TYYSem1\\\u0417\u0430\u0434\u0430\u043D\u0438\u0435 9\\Task9\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{43CD36F2-6845-4CD7-82EB-B21F595ACEE5}|Task9.csproj|d:\\all\\\u043C\u0438\u0438\u0442\\\u043F\u0440\u043E\u0433\u0430\\tyysem1\\\u0437\u0430\u0434\u0430\u043D\u0438\u0435 9\\task9\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43CD36F2-6845-4CD7-82EB-B21F595ACEE5}|Task9.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\all\\\u041C\u0418\u0418\u0422\\\u041F\u0440\u043E\u0433\u0430\\TYYSem1\\\u0417\u0430\u0434\u0430\u043D\u0438\u0435 9\\Task9\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\all\\\u041C\u0418\u0418\u0422\\\u041F\u0440\u043E\u0433\u0430\\TYYSem1\\\u0417\u0430\u0434\u0430\u043D\u0438\u0435 9\\Task9\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAgwDYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-13T13:02:50.762Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
