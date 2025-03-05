@@ -1,0 +1,6 @@
+D:\all\MIIT\TYYSem2\Tasks\Задание10\Task10\bin\Debug\Task10.exe
+D:\all\MIIT\TYYSem2\Tasks\Задание10\Task10\bin\Debug\Task10.pdb
+D:\all\MIIT\TYYSem2\Tasks\Задание10\Task10\obj\Debug\Task10.csproj.AssemblyReference.cache
+D:\all\MIIT\TYYSem2\Tasks\Задание10\Task10\obj\Debug\Task10.csproj.CoreCompileInputs.cache
+D:\all\MIIT\TYYSem2\Tasks\Задание10\Task10\obj\Debug\Task10.exe
+D:\all\MIIT\TYYSem2\Tasks\Задание10\Task10\obj\Debug\Task10.pdb
