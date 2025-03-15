@@ -1,77 +1,79 @@
 ﻿using System;
 
-class MatrixProcessor
+class Program
 {
-    public static int[,] ProcessMatrices(int[,] baseMatrix, int[,] sourceMatrix)
+    static void Main()
     {
-        int rows = Math.Min(baseMatrix.GetLength(0), sourceMatrix.GetLength(0));
-        int cols = Math.Min(baseMatrix.GetLength(1), sourceMatrix.GetLength(1));
-        int[,] resultMatrix = (int[,])baseMatrix.Clone();
+        Console.Write("Введите размер матрицы (n): ");
+        int n = int.Parse(Console.ReadLine());
 
-        for (int i = 0; i < rows; i++)
-        {
-            for (int j = 0; j < cols; j++)
-            {
-                if (i != j) 
-                {
-                    resultMatrix[i, j] = -1;
-                }
-            }
-        }
-        return resultMatrix;
+        Console.WriteLine("Введите элементы первой матрицы:");
+        int[,] sourceMatrix = ReadMatrix(n);
+
+        Console.WriteLine("Введите элементы второй матрицы:");
+        int[,] targetMatrix = ReadMatrix(n);
+
+        TransferNonDiagonalElements(sourceMatrix, targetMatrix);
+
+        Console.WriteLine("Первая матрица после изменений:");
+        PrintMatrix(sourceMatrix);
+
+        Console.WriteLine("Вторая матрица после изменений:");
+        PrintMatrix(targetMatrix);
     }
 
-    public static void PrintMatrix(int[,] matrix)
+    static int[,] ReadMatrix(int size)
     {
-        int rows = matrix.GetLength(0);
-        int cols = matrix.GetLength(1);
-        int cellWidth = 5; 
-
-        Console.WriteLine(new string('-', cols * cellWidth));
-        for (int i = 0; i < rows; i++)
+        int[,] matrix = new int[size, size];
+        for (int i = 0; i < size; i++)
         {
-            Console.Write("| ");
-            for (int j = 0; j < cols; j++)
+            for (int j = 0; j < size; j++)
             {
-                Console.Write(matrix[i, j].ToString().PadLeft(cellWidth - 1) + " ");
-            }
-            Console.WriteLine("|");
-        }
-        Console.WriteLine(new string('-', cols * cellWidth));
-    }
-
-    public static int[,] InputMatrix(int rows, int cols, string name)
-    {
-        int[,] matrix = new int[rows, cols];
-        Console.WriteLine($"Введите элементы матрицы {name} ({rows}x{cols}):");
-        for (int i = 0; i < rows; i++)
-        {
-            for (int j = 0; j < cols; j++)
-            {
-                Console.Write($"[{i},{j}]: ");
+                Console.Write($"Элемент [{i},{j}]: ");
                 matrix[i, j] = int.Parse(Console.ReadLine());
             }
         }
         return matrix;
     }
 
-    static void Main()
+    static void TransferNonDiagonalElements(int[,] source, int[,] target)
     {
-        Console.Write("Введите количество строк и столбцов для матрицы A: ");
-        int rowsA = int.Parse(Console.ReadLine());
-        int colsA = int.Parse(Console.ReadLine());
-        int[,] matrixA = InputMatrix(rowsA, colsA, "A");
+        int size = source.GetLength(0);
 
-        Console.Write("Введите количество строк и столбцов для матрицы B: ");
-        int rowsB = int.Parse(Console.ReadLine());
-        int colsB = int.Parse(Console.ReadLine());
-        int[,] matrixB = InputMatrix(rowsB, colsB, "B");
+        for (int i = 0; i < size; i++)
+        {
+            for (int j = 0; j < size; j++)
+            {
+                if (i != j && i + j != size - 1) 
+                {
+                    target[i, j] = source[i, j];
+                    source[i, j] = -1;
+                }
+            }
+        }
+    }
 
-        Console.WriteLine("Исходная матрица A:");
-        PrintMatrix(matrixA);
+    static void PrintMatrix(int[,] matrix)
+    {
+        int size = matrix.GetLength(0);
+        int maxLength = 0;
 
-        int[,] resultMatrix = ProcessMatrices(matrixB, matrixA);
-        Console.WriteLine("Матрица B после обработки матрицы A:");
-        PrintMatrix(resultMatrix);
+        foreach (int num in matrix)
+        {
+            maxLength = Math.Max(maxLength, num.ToString().Length);
+        }
+
+        string separator = new string('-', (maxLength + 2) * size + 2);
+        Console.WriteLine(separator);
+        for (int i = 0; i < size; i++)
+        {
+            Console.Write("| ");
+            for (int j = 0; j < size; j++)
+            {
+                Console.Write(matrix[i, j].ToString().PadLeft(maxLength) + " ");
+            }
+            Console.WriteLine("|");
+        }
+        Console.WriteLine(separator);
     }
 }
